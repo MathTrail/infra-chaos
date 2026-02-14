@@ -1,0 +1,28 @@
+# Chaos Mesh for k3d/k3s (containerd runtime)
+
+chaosDaemon:
+  runtime: containerd
+  socketPath: /run/k3s/containerd/containerd.sock
+  resources:
+    requests:
+      cpu: "50m"
+      memory: "64Mi"
+    limits:
+      cpu: "200m"
+      memory: "256Mi"
+
+controllerManager:
+  targetNamespace: mathtrail
+  resources:
+    requests:
+      cpu: "50m"
+      memory: "64Mi"
+    limits:
+      cpu: "200m"
+      memory: "256Mi"
+
+dashboard:
+  create: false
+
+dnsServer:
+  create: false
