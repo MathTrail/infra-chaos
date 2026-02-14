@@ -1,0 +1,17 @@
+﻿apiVersion: skaffold/v4beta12
+kind: Config
+metadata:
+  name: mathtrail-infra-chaos
+
+deploy:
+  helm:
+    releases:
+      - name: chaos-mesh
+        repo: https://MathTrail.github.io/charts/charts
+        remoteChart: chaos-mesh
+        namespace: chaos-mesh
+        createNamespace: true
+        valuesFiles:
+          - values/chaos-mesh-values.yaml
+        wait: true
+
