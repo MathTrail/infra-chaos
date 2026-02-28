@@ -7,7 +7,7 @@ Tech Stack: Chaos Mesh 2.8, Helm, Skaffold, Just
 Namespace: chaos-mesh (operator), mathtrail (experiments target)
 
 # Communication Map
-No Dapr communication — this is an infrastructure operator.
+No inter-service communication — this is an infrastructure operator.
 Targets: All MathTrail service pods (label: app.kubernetes.io/part-of: mathtrail)
 Results: Visible in Chaos Mesh dashboard and Grafana (via mathtrail-infra-observability)
 
@@ -19,7 +19,7 @@ Results: Visible in Chaos Mesh dashboard and Grafana (via mathtrail-infra-observ
 
 # Commit Convention
 Use Conventional Commits: feat(chaos):, fix(chaos):, chore(chaos):
-Example: feat(chaos): add network delay experiment for dapr resilience
+Example: feat(chaos): add network delay experiment for service resilience
 
 # Testing Strategy
 Deploy: `just deploy`
